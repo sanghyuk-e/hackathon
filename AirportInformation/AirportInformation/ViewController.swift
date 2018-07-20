@@ -47,36 +47,34 @@ class ViewController: UIViewController {
     
     
     var currentElement = ""
+  
     
-    
+    func labelValue(canPaking: Int, label: UILabel) -> String{
+        if Int(Items[canPaking]["parkingarea"]!)! - Int(Items[canPaking]["parking"]!)! > 0  {
+            label.textColor = .black
+            return "\(String(Int(Items[canPaking]["parkingarea"]!)! - Int(Items[canPaking]["parking"]!)!))대 가능"
+        }else{
+            return "만차"
+        }
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         requestInformation()
         currentDateAndTime.text = Items[0]["datetm"]
         
-        firstFloorPakingArea.text = Int(Items[0]["parkingarea"]!)! - Int(Items[0]["parking"]!)! > 0 ? "\(String(Int(Items[0]["parkingarea"]!)! - Int(Items[0]["parking"]!)!))대 가능": "만차"
-        b1FloorPakingArea.text = Int(Items[1]["parkingarea"]!)! - Int(Items[1]["parking"]!)! > 0 ? "\(String(Int(Items[1]["parkingarea"]!)! - Int(Items[1]["parking"]!)!))대 가능": "만차"
-        b2FloorPakingArea.text = Int(Items[2]["parkingarea"]!)! - Int(Items[2]["parking"]!)! > 0 ? "\(String(Int(Items[2]["parkingarea"]!)! - Int(Items[2]["parking"]!)!))대 가능": "만차"
-        b3FloorPakingArea.text = Int(Items[3]["parkingarea"]!)! - Int(Items[3]["parking"]!)! > 0 ? "\(String(Int(Items[3]["parkingarea"]!)! - Int(Items[3]["parking"]!)!))대 가능": "만차"
-        p1TowerPakingArea.text = Int(Items[4]["parkingarea"]!)! - Int(Items[4]["parking"]!)! > 0 ? "\(String(Int(Items[4]["parkingarea"]!)! - Int(Items[4]["parking"]!)!))대 가능": "만차"
-        p2TowerPakingArea.text = Int(Items[5]["parkingarea"]!)! - Int(Items[5]["parking"]!)! > 0 ? "\(String(Int(Items[5]["parkingarea"]!)! - Int(Items[5]["parking"]!)!))대 가능": "만차"
-        p1LongPakingArea.text = Int(Items[6]["parkingarea"]!)! - Int(Items[6]["parking"]!)! > 0 ? "\(String(Int(Items[6]["parkingarea"]!)! - Int(Items[6]["parking"]!)!))대 가능": "만차"
-        p2LongPakingArea.text = Int(Items[7]["parkingarea"]!)! - Int(Items[7]["parking"]!)! > 0 ? "\(String(Int(Items[7]["parkingarea"]!)! - Int(Items[7]["parking"]!)!))대 가능": "만차"
-        p3LongPakingArea.text = Int(Items[8]["parkingarea"]!)! - Int(Items[8]["parking"]!)! > 0 ? "\(String(Int(Items[8]["parkingarea"]!)! - Int(Items[8]["parking"]!)!))대 가능": "만차"
-        p4LongPakingArea.text = Int(Items[9]["parkingarea"]!)! - Int(Items[9]["parking"]!)! > 0 ? "\(String(Int(Items[9]["parkingarea"]!)! - Int(Items[9]["parking"]!)!))대 가능": "만차"
-        //
-        //
-        //        b1FloorPakingArea.text = String(Int(Items[1]["parkingarea"]!)! - Int(Items[1]["parking"]!)!)
-        //        b2FloorPakingArea.text = String(Int(Items[2]["parkingarea"]!)! - Int(Items[2]["parking"]!)!)
-        //        b3FloorPakingArea.text = String(Int(Items[3]["parkingarea"]!)! - Int(Items[3]["parking"]!)!)
-        //        p1TowerPakingArea.text = String(Int(Items[4]["parkingarea"]!)! - Int(Items[4]["parking"]!)!)
-        //        p2TowerPakingArea.text = String(Int(Items[5]["parkingarea"]!)! - Int(Items[5]["parking"]!)!)
-        //        p1LongPakingArea.text = String(Int(Items[6]["parkingarea"]!)! - Int(Items[6]["parking"]!)!)
-        //        p2LongPakingArea.text = String(Int(Items[7]["parkingarea"]!)! - Int(Items[7]["parking"]!)!)
-        //        p3LongPakingArea.text = String(Int(Items[8]["parkingarea"]!)! - Int(Items[8]["parking"]!)!)
-        //        p4LongPakingArea.text = String(Int(Items[9]["parkingarea"]!)! - Int(Items[9]["parking"]!)!)
-        //
+        firstFloorPakingArea.text = labelValue(canPaking: 0, label: firstFloorPakingArea)
+        b1FloorPakingArea.text = labelValue(canPaking: 1, label: b1FloorPakingArea)
+        b2FloorPakingArea.text = labelValue(canPaking: 2, label: b2FloorPakingArea)
+        b3FloorPakingArea.text = labelValue(canPaking: 3, label: b3FloorPakingArea)
+        p1TowerPakingArea.text = labelValue(canPaking: 4, label: p1TowerPakingArea)
+        p2TowerPakingArea.text = labelValue(canPaking: 5, label: p2TowerPakingArea)
+        p1LongPakingArea.text = labelValue(canPaking: 6, label: p1LongPakingArea)
+        p2LongPakingArea.text = labelValue(canPaking: 7, label: p2LongPakingArea)
+        p3LongPakingArea.text = labelValue(canPaking: 8, label: p3LongPakingArea)
+        p4LongPakingArea.text = labelValue(canPaking: 9, label: p4LongPakingArea)
+ 
     }
     
     
