@@ -9,14 +9,20 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet weak var t2currentDateAndTime:UILabel!
     @IBOutlet weak var t2firstFloorPakingArea:UILabel!
     @IBOutlet weak var t2BMFloorPakingArea:UILabel!
     @IBOutlet weak var t2B1FloorPakingArea:UILabel!
     @IBOutlet weak var t2longFloorPakingArea:UILabel!
-
-
+    @IBAction private func reFreshButton(_ sender: UIBarButtonItem){
+        Items.removeAll()
+        requestInformation()
+        updateLable()
+        print(Items)
+        
+    }
+    
     var xmlparser = XMLParser()
     var Items = [[String : String]]()
     var Item = [String: String]()
@@ -26,6 +32,23 @@ class SecondViewController: UIViewController {
     var floor = ""
     var currentElement = ""
     
+    var year = ""
+    var month = ""
+    var day = ""
+    var hour = ""
+    var minute = ""
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        requestInformation()
+        updateLable()
+        print(Items)
+        
+        
+    }
     
     func labelValue(canPaking: Int, label: UILabel) -> String{
         if Int(Items[canPaking]["parkingarea"]!)! - Int(Items[canPaking]["parking"]!)! > 0  {
@@ -35,19 +58,37 @@ class SecondViewController: UIViewController {
             return "만차"
         }
     }
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        requestInformation()
-        print(Items)
-        t2currentDateAndTime.text = Items[0]["datetm"]
+    
+    func currentDateAndTime(){
+        let str: String = Items[0]["datetm"]!
+        let yearStartIndex = str.index(str.startIndex, offsetBy: 0)
+        let yearEndIndex = str.index(yearStartIndex, offsetBy: 4)
+        let monthStartIndex = str.index(yearEndIndex, offsetBy: 0)
+        let monthEndIndex = str.index(monthStartIndex, offsetBy: 2)
+        let dayStartIndex = str.index(monthEndIndex, offsetBy: 0)
+        let dayEndIndex = str.index(dayStartIndex, offsetBy: 2)
+        let hourStartIndex = str.index(dayEndIndex, offsetBy: 0)
+        let hourEndIndex = str.index(hourStartIndex, offsetBy: 2)
+        let minuteStartIndex = str.index(hourEndIndex, offsetBy: 0)
+        let minuteEndIndex = str.index(minuteStartIndex, offsetBy: 2)
+        year = String(str[yearStartIndex..<yearEndIndex])
+        month = String(str[monthStartIndex..<monthEndIndex])
+        day = String(str[dayStartIndex..<dayEndIndex])
+        hour = String(str[hourStartIndex..<hourEndIndex])
+        minute = String(str[minuteStartIndex..<minuteEndIndex])
+        t2currentDateAndTime.text = "updating... " + year + "." + month + "." + day + " " + hour + ":"  + minute
+    }
+    
+    func updateLable(){
+        currentDateAndTime()
         t2firstFloorPakingArea.text = labelValue(canPaking: 4, label: t2firstFloorPakingArea)
         t2BMFloorPakingArea.text = labelValue(canPaking: 5, label: t2BMFloorPakingArea)
         t2B1FloorPakingArea.text = labelValue(canPaking: 6, label: t2B1FloorPakingArea)
         t2longFloorPakingArea.text = labelValue(canPaking: 13, label: t2longFloorPakingArea)
-        
     }
+    
+    
     
     func requestInformation(){
         let pakingInformationLink = "http://openapi.airport.kr/openapi/service/StatusOfParking/getTrackingParking?serviceKey=1QzzaKNZIuZ%2F1pWKrpJIgUJe%2BqdygocaGZWRRmysbwmCkbdp9o%2FZp9bduyxnFw%2F%2B1w6DUhs%2FPuAcb7KE1y1TWA%3D%3D&pageNo=1&startPage=1&numOfRows=14&pageSize=10"

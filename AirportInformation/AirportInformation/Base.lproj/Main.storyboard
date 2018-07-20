@@ -275,7 +275,7 @@
                     <navigationItem key="navigationItem" title="제 2 여객 터미널" id="QWd-Oc-wV9">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ft3-93-rTE">
                             <connections>
-                                <action selector="reFreshButton:" destination="BYZ-38-t0r" id="85Z-qE-Ykt"/>
+                                <action selector="reFreshButton:" destination="yxH-QK-Gyd" id="S2I-xj-UoX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
