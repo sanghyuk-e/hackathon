@@ -36,29 +36,29 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrV-CL-aZj">
-                                <rect key="frame" x="160" y="154" width="86" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrV-CL-aZj">
+                                <rect key="frame" x="171" y="154" width="86" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-6R-cBZ">
-                                <rect key="frame" x="160" y="174" width="86" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-6R-cBZ">
+                                <rect key="frame" x="171" y="174" width="86" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-ji-flx">
-                                <rect key="frame" x="160" y="194" width="86" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-ji-flx">
+                                <rect key="frame" x="171" y="194" width="86" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZY-vI-FEh">
-                                <rect key="frame" x="160" y="213" width="86" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만차" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZY-vI-FEh">
+                                <rect key="frame" x="171" y="213" width="86" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,7 +137,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="제 1 여객 터미널" id="QyJ-di-ys0"/>
+                    <navigationItem key="navigationItem" title="제 1 여객 터미널" id="QyJ-di-ys0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ZTX-fO-Yac">
+                            <connections>
+                                <action selector="reFreshButton:" destination="BYZ-38-t0r" id="GLF-cr-CB6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="b1FloorPakingArea" destination="cOX-6R-cBZ" id="S43-0V-l4N"/>
                         <outlet property="b2FloorPakingArea" destination="wcz-ji-flx" id="3Wh-pR-wyj"/>
@@ -145,9 +151,9 @@
                         <outlet property="currentDateAndTime" destination="g1X-mk-2O4" id="VZg-VI-syc"/>
                         <outlet property="firstFloorPakingArea" destination="WrV-CL-aZj" id="fXa-a4-ch5"/>
                         <outlet property="imageView" destination="ycO-Sv-i2b" id="cvf-zO-WYz"/>
-                        <outlet property="p1LongPakingArea" destination="Eeq-15-813" id="8JZ-3u-k3x"/>
+                        <outlet property="p1LongPakingArea" destination="OWh-lC-5Bm" id="EzQ-yn-Kfz"/>
                         <outlet property="p1TowerPakingArea" destination="haz-up-cMg" id="Rke-ff-FLm"/>
-                        <outlet property="p2LongPakingArea" destination="OWh-lC-5Bm" id="2NE-Qh-c4t"/>
+                        <outlet property="p2LongPakingArea" destination="Eeq-15-813" id="z8h-Og-DCS"/>
                         <outlet property="p2TowerPakingArea" destination="cLl-7c-rY5" id="oEn-Or-beI"/>
                         <outlet property="p3LongPakingArea" destination="dKO-k6-yRb" id="LF2-Zq-9Me"/>
                         <outlet property="p4LongPakingArea" destination="gS8-8M-l1W" id="uiZ-id-gyY"/>
@@ -192,21 +198,98 @@
             </objects>
             <point key="canvasLocation" x="2839.1999999999998" y="132.68365817091455"/>
         </scene>
-        <!--제2여객터미널-->
+        <!--제 2 여객 터미널-->
         <scene sceneID="YfB-Lu-6yO">
             <objects>
                 <viewController id="yxH-QK-Gyd" customClass="SecondViewController" customModule="AirportInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b7Q-VP-DXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t2" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-TC-kz0">
+                                <rect key="frame" x="50" y="79" width="275" height="398"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yRX-8W-W3m">
+                                <rect key="frame" x="20" y="485" width="335" height="83"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">∙ 1일 이상 주차의 경우 장기주차장을 이용하시기 바랍니다.
+∙ 장기주차장에 주차하신 경우 공항 셔틀버스를 이용하시면 여객터미널까지 쉽게 오실 수 있습니다.
+∙ 단기주차장은 승용차 전용구역입니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjC-UK-7dB">
+                                <rect key="frame" x="74" y="73" width="226" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jM9-bH-XUP">
+                                <rect key="frame" x="144" y="576" width="86" height="30"/>
+                                <state key="normal" title="주차요금 안내 "/>
+                                <connections>
+                                    <segue destination="6t5-de-xDD" kind="show" id="Ixy-gq-MiF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enn-fu-IfR">
+                                <rect key="frame" x="167" y="293" width="94" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-yE-9hL">
+                                <rect key="frame" x="167" y="156" width="94" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fle-GT-2gI">
+                                <rect key="frame" x="167" y="228" width="94" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-wE-bnv">
+                                <rect key="frame" x="167" y="357" width="94" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tlG-TC-kz0" firstAttribute="leading" secondItem="BZi-yu-QXu" secondAttribute="leading" constant="50" id="7D6-jX-rSq"/>
+                            <constraint firstItem="tlG-TC-kz0" firstAttribute="centerX" secondItem="BZi-yu-QXu" secondAttribute="centerX" id="Dad-Ib-TUF"/>
+                            <constraint firstAttribute="bottom" secondItem="tlG-TC-kz0" secondAttribute="bottom" constant="190" id="I0b-2t-bGg"/>
+                            <constraint firstItem="BZi-yu-QXu" firstAttribute="trailing" secondItem="tlG-TC-kz0" secondAttribute="trailing" constant="50" id="S72-AD-FCu"/>
+                            <constraint firstItem="jM9-bH-XUP" firstAttribute="centerX" secondItem="BZi-yu-QXu" secondAttribute="centerX" id="VUX-X2-baK"/>
+                            <constraint firstItem="BZi-yu-QXu" firstAttribute="top" secondItem="tlG-TC-kz0" secondAttribute="top" constant="-15" id="gMG-cD-lhN"/>
+                            <constraint firstItem="yRX-8W-W3m" firstAttribute="leading" secondItem="BZi-yu-QXu" secondAttribute="leading" constant="20" id="ge8-e0-MRM"/>
+                            <constraint firstItem="BZi-yu-QXu" firstAttribute="bottom" secondItem="jM9-bH-XUP" secondAttribute="bottom" constant="12" id="nZF-c0-4hG"/>
+                            <constraint firstItem="jM9-bH-XUP" firstAttribute="top" secondItem="yRX-8W-W3m" secondAttribute="bottom" constant="8" id="npG-Jw-njZ"/>
+                            <constraint firstItem="BZi-yu-QXu" firstAttribute="trailing" secondItem="yRX-8W-W3m" secondAttribute="trailing" constant="20" id="wl1-0Y-wyA"/>
+                            <constraint firstItem="yRX-8W-W3m" firstAttribute="top" secondItem="tlG-TC-kz0" secondAttribute="bottom" constant="8" id="zbf-YZ-YQr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BZi-yu-QXu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="제2여객터미널" id="dOt-xT-qIG"/>
+                    <navigationItem key="navigationItem" title="제 2 여객 터미널" id="QWd-Oc-wV9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ft3-93-rTE">
+                            <connections>
+                                <action selector="reFreshButton:" destination="BYZ-38-t0r" id="85Z-qE-Ykt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="t2B1FloorPakingArea" destination="Enn-fu-IfR" id="flF-Yo-0YY"/>
+                        <outlet property="t2BMFloorPakingArea" destination="fle-GT-2gI" id="0l7-ee-zND"/>
+                        <outlet property="t2currentDateAndTime" destination="EjC-UK-7dB" id="kau-7b-57t"/>
+                        <outlet property="t2firstFloorPakingArea" destination="sIY-yE-9hL" id="Ywa-kW-nIC"/>
+                        <outlet property="t2longFloorPakingArea" destination="aNz-wE-bnv" id="pKh-sX-NW0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWh-97-Jdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="892"/>
+            <point key="canvasLocation" x="2015.2" y="891.90404797601207"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xU6-FY-07x">
@@ -219,7 +302,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="qKG-hN-moB" kind="relationship" relationship="viewControllers" id="CmF-jl-Dcr"/>
-                        <segue destination="yxH-QK-Gyd" kind="relationship" relationship="viewControllers" id="VOt-Hc-yKd"/>
+                        <segue destination="lwp-62-Mrr" kind="relationship" relationship="viewControllers" id="VOt-Hc-yKd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHc-41-jI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,9 +328,32 @@
             </objects>
             <point key="canvasLocation" x="1076" y="132.68365817091455"/>
         </scene>
+        <!--제2여객터미널-->
+        <scene sceneID="u2c-fo-1u4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lwp-62-Mrr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="제2여객터미널" id="dOt-xT-qIG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PjX-XK-uSZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yxH-QK-Gyd" kind="relationship" relationship="rootViewController" id="P4j-lQ-LPo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMj-wC-uK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="891.90404797601207"/>
+        </scene>
     </scenes>
     <resources>
         <image name="KakaoTalk_Photo_2018-07-20-15-01-44" width="1125" height="2089"/>
+        <image name="t2" width="796" height="934"/>
         <image name="terminal1" width="796" height="920"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ixy-gq-MiF"/>
+    </inferredMetricsTieBreakers>
 </document>
