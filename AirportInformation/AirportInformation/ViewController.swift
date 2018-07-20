@@ -57,12 +57,16 @@ class ViewController: UIViewController {
             return "만차"
         }
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         requestInformation()
         currentDateAndTime.text = Items[0]["datetm"]
+//        let a = Items[0]["datetm"] as! String
+//        let b =  a.index(a.startIndex, offsetBy: 9)
+//        print(b)
+        
         
         firstFloorPakingArea.text = labelValue(canPaking: 0, label: firstFloorPakingArea)
         b1FloorPakingArea.text = labelValue(canPaking: 1, label: b1FloorPakingArea)
