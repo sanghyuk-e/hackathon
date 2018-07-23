@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		305906702101784000D276E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059066F2101784000D276E0 /* AppDelegate.swift */; };
-		305906722101784000D276E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305906712101784000D276E0 /* ViewController.swift */; };
+		305906722101784000D276E0 /* FirstTerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305906712101784000D276E0 /* FirstTerminalViewController.swift */; };
 		305906752101784000D276E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305906732101784000D276E0 /* Main.storyboard */; };
 		305906772101784100D276E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305906762101784100D276E0 /* Assets.xcassets */; };
 		3059067A2101784100D276E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305906782101784100D276E0 /* LaunchScreen.storyboard */; };
+		305906822101B16E00D276E0 /* ParkingChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305906812101B16E00D276E0 /* ParkingChargeViewController.swift */; };
+		305906842101BBF800D276E0 /* SecondTerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305906832101BBF800D276E0 /* SecondTerminalViewController.swift */; };
+		305906862101C84B00D276E0 /* ParkingChargeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305906852101C84B00D276E0 /* ParkingChargeViewController2.swift */; };
+		305906882101E23A00D276E0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305906872101E23A00D276E0 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3059066C2101784000D276E0 /* IncheonAirport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncheonAirport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3059066F2101784000D276E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		305906712101784000D276E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		305906712101784000D276E0 /* FirstTerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTerminalViewController.swift; sourceTree = "<group>"; };
 		305906742101784000D276E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		305906762101784100D276E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		305906792101784100D276E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3059067B2101784100D276E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305906812101B16E00D276E0 /* ParkingChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingChargeViewController.swift; sourceTree = "<group>"; };
+		305906832101BBF800D276E0 /* SecondTerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTerminalViewController.swift; sourceTree = "<group>"; };
+		305906852101C84B00D276E0 /* ParkingChargeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingChargeViewController2.swift; sourceTree = "<group>"; };
+		305906872101E23A00D276E0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				3059066F2101784000D276E0 /* AppDelegate.swift */,
-				305906712101784000D276E0 /* ViewController.swift */,
+				305906712101784000D276E0 /* FirstTerminalViewController.swift */,
+				305906832101BBF800D276E0 /* SecondTerminalViewController.swift */,
 				305906732101784000D276E0 /* Main.storyboard */,
+				305906872101E23A00D276E0 /* TableViewController.swift */,
 				305906762101784100D276E0 /* Assets.xcassets */,
 				305906782101784100D276E0 /* LaunchScreen.storyboard */,
 				3059067B2101784100D276E0 /* Info.plist */,
+				305906812101B16E00D276E0 /* ParkingChargeViewController.swift */,
+				305906852101C84B00D276E0 /* ParkingChargeViewController2.swift */,
 			);
 			path = IncheonAirport;
 			sourceTree = "<group>";
@@ -135,7 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				305906722101784000D276E0 /* ViewController.swift in Sources */,
+				305906842101BBF800D276E0 /* SecondTerminalViewController.swift in Sources */,
+				305906882101E23A00D276E0 /* TableViewController.swift in Sources */,
+				305906862101C84B00D276E0 /* ParkingChargeViewController2.swift in Sources */,
+				305906722101784000D276E0 /* FirstTerminalViewController.swift in Sources */,
+				305906822101B16E00D276E0 /* ParkingChargeViewController.swift in Sources */,
 				305906702101784000D276E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = IncheonAirport/Info.plist;
@@ -298,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = IncheonAirport/Info.plist;
