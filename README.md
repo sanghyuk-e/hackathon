@@ -10,6 +10,6 @@ You can download __"running video.mov"__ from [here](https://github.com/sanghyuk
 - period : 2018.07.20
 - language : Swift 4.0
 - team
-  - 2 ios developers
+  - 2 iOS developers
 
 __+The project has been carried out with Hackathon and not all functions are complete.__
